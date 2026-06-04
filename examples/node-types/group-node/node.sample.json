@@ -1,0 +1,11 @@
+{
+  "id": "groupNode_example",
+  "type": "groupNode",
+  "position": {
+    "x": 0,
+    "y": 0
+  },
+  "data": {
+    "label": "groupNode example"
+  }
+}

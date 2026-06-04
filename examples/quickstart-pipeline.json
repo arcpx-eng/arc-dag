@@ -1,0 +1,39 @@
+{
+  "nodes": [
+    {
+      "id": "input_1",
+      "type": "text",
+      "data": {
+        "label": "Input",
+        "nodeData": "hello async-dag"
+      }
+    },
+    {
+      "id": "cell_1",
+      "type": "pipeNode",
+      "data": {
+        "label": "Store",
+        "outputTarget": "$stored"
+      }
+    },
+    {
+      "id": "output_1",
+      "type": "pipeNode",
+      "data": {
+        "label": "Result"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-input-cell",
+      "source": "input_1",
+      "target": "cell_1"
+    },
+    {
+      "id": "e-cell-output",
+      "source": "cell_1",
+      "target": "output_1"
+    }
+  ]
+}

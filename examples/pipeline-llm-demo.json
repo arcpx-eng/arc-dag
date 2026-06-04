@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "prompt_1",
+      "type": "text",
+      "position": { "x": 0, "y": 0 },
+      "data": {
+        "label": "Topic",
+        "nodeData": "Explain what a DAG is in one short paragraph."
+      }
+    },
+    {
+      "id": "llm_1",
+      "type": "genText",
+      "position": { "x": 280, "y": 0 },
+      "data": {
+        "label": "LLM",
+        "isPassThrough": true,
+        "nodeData": "Answer using the topic below."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-prompt-llm",
+      "source": "prompt_1",
+      "target": "llm_1"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "webpage_example",
+  "type": "webpage",
+  "position": { "x": 0, "y": 0 },
+  "data": {
+    "label": "Fetch page",
+    "nodeData": {
+      "url": "https://example.com",
+      "timeoutMs": 15000,
+      "maxChars": 20000
+    }
+  }
+}

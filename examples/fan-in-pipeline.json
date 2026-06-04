@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "input_a",
+      "type": "text",
+      "position": { "x": 0, "y": 0 },
+      "data": {
+        "label": "Branch A",
+        "nodeData": "from branch A"
+      }
+    },
+    {
+      "id": "input_b",
+      "type": "text",
+      "position": { "x": 0, "y": 120 },
+      "data": {
+        "label": "Branch B",
+        "nodeData": "from branch B"
+      }
+    },
+    {
+      "id": "merge_1",
+      "type": "pipeNode",
+      "position": { "x": 320, "y": 60 },
+      "data": {
+        "label": "Merge",
+        "outputTarget": "$merged"
+      }
+    },
+    {
+      "id": "final_1",
+      "type": "pipeNode",
+      "position": { "x": 600, "y": 60 },
+      "data": {
+        "label": "Final"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-a-merge",
+      "source": "input_a",
+      "target": "merge_1"
+    },
+    {
+      "id": "e-b-merge",
+      "source": "input_b",
+      "target": "merge_1"
+    },
+    {
+      "id": "e-merge-final",
+      "source": "merge_1",
+      "target": "final_1"
+    }
+  ]
+}

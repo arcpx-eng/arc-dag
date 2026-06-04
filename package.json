@@ -1,0 +1,68 @@
+{
+  "name": "async-dag",
+  "version": "0.2.0",
+  "description": "Open-source DAG engine from ArcPX — pluggable node executor, parallel workflows, GraphEngine({ llm }) for Bedrock/OpenAI",
+  "readme": "README.md",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "arcpx-logo.svg"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "run:local": "npm run build && node examples/run-local.mjs examples/quickstart-pipeline.json",
+    "quickstart": "npm run run:local",
+    "run:fan-in": "npm run build && node examples/run-local.mjs examples/fan-in-pipeline.json",
+    "run:fan-out": "npm run build && node examples/run-local.mjs examples/fan-out-pipeline.json",
+    "run:llm": "npm run build && node examples/run-with-llm.mjs examples/pipeline-llm-demo.json examples/global-settings.example.json",
+    "normalize:example": "npm run build && node examples/normalize-pipeline.mjs examples/pipeline-ai-repos.normalized.json",
+    "run:web-scraper": "npm run build && node examples/run-local.mjs examples/web-scraper-pipeline.json",
+    "run:output-chaining": "npm run build && node examples/run-with-llm.mjs examples/pipeline-output-chaining.json",
+    "generate:handler": "node examples/generate-node-handler.mjs",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "prepublishOnly": "npm run build && node scripts/verify-npm-pack.mjs",
+    "pack:check": "npm run build && node scripts/verify-npm-pack.mjs"
+  },
+  "keywords": [
+    "async-dag",
+    "arcpx",
+    "dag",
+    "graph",
+    "workflow",
+    "async",
+    "pipeline",
+    "runner",
+    "bedrock",
+    "llm",
+    "node-executor"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcpx-eng/async-dag.git"
+  },
+  "homepage": "https://arcpx-eng.github.io/async-dag/",
+  "bugs": {
+    "url": "https://github.com/arcpx-eng/async-dag/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

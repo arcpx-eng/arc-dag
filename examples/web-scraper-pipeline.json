@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "fetch_1",
+      "type": "webpage",
+      "data": {
+        "label": "Fetch example.com",
+        "nodeData": {
+          "url": "https://example.com",
+          "maxChars": 8000
+        }
+      }
+    },
+    {
+      "id": "summarize_1",
+      "type": "pipeNode",
+      "data": {
+        "label": "Page text",
+        "outputTarget": "$page_text"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-fetch-summarize",
+      "source": "fetch_1",
+      "target": "summarize_1"
+    }
+  ]
+}

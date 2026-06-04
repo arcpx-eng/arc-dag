@@ -1,0 +1,12 @@
+{
+  "id": "aiRepos_example",
+  "type": "aiRepos",
+  "position": {
+    "x": 0,
+    "y": 0
+  },
+  "data": {
+    "label": "aiRepos",
+    "nodeData": {}
+  }
+}

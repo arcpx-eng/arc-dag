@@ -1,0 +1,7 @@
+{
+  "model": "",
+  "temperature": 0.5,
+  "maxOutputTokens": 4096,
+  "systemPrompt": "You are a helpful assistant",
+  "serviceMode": ""
+}

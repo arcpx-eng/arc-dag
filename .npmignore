@@ -1,0 +1,25 @@
+# Whitelist is package.json "files" — this file is defense-in-depth only.
+
+# Source & dev
+src/
+test/
+scripts/
+examples/
+docs/
+docs-site/
+.cursor/
+.github/
+
+# Env & secrets (never publish)
+.env
+.env.*
+!.env.template
+!.env.bedrock.template
+
+# Build artifacts not in whitelist
+*.tsbuildinfo
+tsconfig.json
+
+# Misc repo files
+node_modules/
+dist/**/*.map

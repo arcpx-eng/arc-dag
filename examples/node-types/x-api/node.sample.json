@@ -1,0 +1,13 @@
+{
+  "id": "xApi_example",
+  "type": "xApi",
+  "position": { "x": 320, "y": 0 },
+  "data": {
+    "label": "X search",
+    "nodeData": {
+      "operation": "searchRecent",
+      "query": "open source DAG",
+      "maxResults": 5
+    }
+  }
+}

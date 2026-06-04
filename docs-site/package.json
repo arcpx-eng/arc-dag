@@ -1,0 +1,22 @@
+{
+  "name": "@async-dag/docs-site",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Local VitePress site for async-dag — not published to npm",
+  "type": "module",
+  "scripts": {
+    "postinstall": "ln -sfn ../docs-site/node_modules ../docs/node_modules",
+    "start": "VITEPRESS_BASE=/ vitepress dev ../docs",
+    "build": "vitepress build ../docs",
+    "serve": "vitepress preview ../docs",
+    "clean": "rm -rf ../docs/.vitepress/cache ../docs/.vitepress/dist node_modules/.vite"
+  },
+  "devDependencies": {
+    "mermaid": "^11.12.0",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

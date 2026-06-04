@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "text_start",
+      "type": "text",
+      "position": { "x": 0, "y": 0 },
+      "data": {
+        "label": "Input",
+        "nodeData": "Hello from ArcPX export"
+      }
+    },
+    {
+      "id": "pipeNode_out",
+      "type": "pipeNode",
+      "position": { "x": 320, "y": 0 },
+      "data": {
+        "label": "Output cell"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-start-out",
+      "source": "text_start",
+      "target": "pipeNode_out",
+      "type": "customEdge"
+    }
+  ]
+}

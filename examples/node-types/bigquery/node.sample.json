@@ -1,0 +1,13 @@
+{
+  "id": "bigQuery_example",
+  "type": "bigQuery",
+  "position": { "x": 0, "y": 0 },
+  "data": {
+    "label": "BigQuery",
+    "nodeData": {
+      "projectId": "my-gcp-project",
+      "query": "SELECT 1 AS ok",
+      "location": "US"
+    }
+  }
+}

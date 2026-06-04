@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "source_1",
+      "type": "text",
+      "position": { "x": 0, "y": 120 },
+      "data": {
+        "label": "Source",
+        "nodeData": "shared upstream payload"
+      }
+    },
+    {
+      "id": "out_a",
+      "type": "pipeNode",
+      "position": { "x": 320, "y": 0 },
+      "data": {
+        "label": "Branch A"
+      }
+    },
+    {
+      "id": "out_b",
+      "type": "pipeNode",
+      "position": { "x": 320, "y": 120 },
+      "data": {
+        "label": "Branch B"
+      }
+    },
+    {
+      "id": "out_c",
+      "type": "pipeNode",
+      "position": { "x": 320, "y": 240 },
+      "data": {
+        "label": "Branch C"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-src-a",
+      "source": "source_1",
+      "target": "out_a"
+    },
+    {
+      "id": "e-src-b",
+      "source": "source_1",
+      "target": "out_b"
+    },
+    {
+      "id": "e-src-c",
+      "source": "source_1",
+      "target": "out_c"
+    }
+  ]
+}

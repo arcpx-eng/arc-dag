@@ -1,0 +1,13 @@
+{
+  "id": "markdown_output_example",
+  "type": "markdownOutput",
+  "position": { "x": 640, "y": 120 },
+  "data": {
+    "label": "Markdown report",
+    "nodeData": {
+      "title": "Combined site content",
+      "intro": "Fetched in parallel and merged below.",
+      "outputPath": "./examples/output/we-are-canada.md"
+    }
+  }
+}

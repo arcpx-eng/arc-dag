@@ -1,0 +1,13 @@
+{
+  "id": "llm_example",
+  "type": "LLM",
+  "position": { "x": 400, "y": 0 },
+  "data": {
+    "label": "Bedrock LLM",
+    "nodeData": "Answer in one short paragraph based on the upstream context.",
+    "settings": {
+      "modelId": "us.anthropic.claude-sonnet-4-6",
+      "region": "us-east-1"
+    }
+  }
+}

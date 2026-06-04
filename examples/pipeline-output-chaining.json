@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "fetch_example",
+      "type": "webpage",
+      "data": {
+        "label": "Canada Government",
+        "outputTarget": "$ontario_gov",
+        "nodeData": {
+          "url": "https://www.ontario.ca/page/government-ontario",
+          "maxChars": 6000,
+          "timeoutMs": 20000
+        }
+      }
+    },
+    {
+      "id": "fetch_wikipedia",
+      "type": "webpage",
+      "data": {
+        "label": "Canada Holiday",
+        "outputTarget": "$canada_holidays",
+        "nodeData": {
+          "url": "https://www.statutoryholidays.com/ontario.php",
+          "maxChars": 6000,
+          "timeoutMs": 20000
+        }
+      }
+    },
+    {
+      "id": "genText_we_are_canada",
+      "type": "genText",
+      "data": {
+        "label": "We are Canada",
+        "isPassThrough": true,
+        "nodeData": "System Prompt: You are writing a public-facing synthesis report. You must attribute every claim to its upstream webpage. In the final report, include a **Sources** section that lists each source by name and prints its URL on its own line (copy URLs from the extracts below). When you use facts from a section, name that source in prose (e.g. \"According to the Ontario government page…\").\n\nWrite a concise report titled \"We are Canada\" that synthesizes the two Canadian webpage extracts below for a general audience. Use clear Markdown headings.\n\n## Ontario government\n\n{$ontario_gov}\n\n## Canada statutory holidays\n\n{$canada_holidays}\n\nEnd the report with:\n\n## Sources\n\n- Ontario government: (title and URL from the Ontario extract above)\n- Canada statutory holidays: (title and URL from the holidays extract above)",
+        "settings": {
+          "outputPath": "./examples/output/we-are-canada.md",
+          "modelId": "us.anthropic.claude-sonnet-4-6",
+          "region": "us-east-1"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-example-gentext",
+      "source": "fetch_example",
+      "target": "genText_we_are_canada"
+    },
+    {
+      "id": "e-wiki-gentext",
+      "source": "fetch_wikipedia",
+      "target": "genText_we_are_canada"
+    }
+  ]
+}
