@@ -22,12 +22,6 @@ npm run run:local
 
 The engine stays small and **pluggable**. The best way to share integrations is to add a **reference node type** under [`examples/node-types/`](./examples/node-types/).
 
-### Ideas we encourage
-
-- **`bigQuery`** — query Google BigQuery ([starter stub](./examples/node-types/bigquery/))
-- **`xApi`** — X (Twitter) platform API ([starter stub](./examples/node-types/x-api/))
-- Slack, Postgres, S3, webhooks, email, CRMs, vector DBs, etc.
-
 ### What to include in your PR
 
 1. Folder: `examples/node-types/<type-name>/`
@@ -46,8 +40,8 @@ The engine stays small and **pluggable**. The best way to share integrations is 
 
 ### Example commit titles
 
-- `feat(examples): add bigQuery node type with service account docs`
-- `feat(examples): xApi searchRecent handler and sample node`
+- `feat(examples): add slack webhook node type with sample node`
+- `feat(examples): postgres query handler and README`
 - `docs: index postgres node type in node-types README`
 
 ## Other contributions
