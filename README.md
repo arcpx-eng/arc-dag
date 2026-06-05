@@ -36,6 +36,22 @@
 - **Workflows** — pipeline JSON you can version and diff
 - **Automation** — CI, cron, CLI, your app — local-first
 
+## Documentation
+
+Full docs (guides, API, Mermaid example diagrams):
+
+**[https://arcpx-eng.github.io/arc-dag/](https://arcpx-eng.github.io/arc-dag/)**
+
+| Topic | Link |
+|-------|------|
+| Getting started | [getting-started](https://arcpx-eng.github.io/arc-dag/getting-started) |
+| API reference | [api](https://arcpx-eng.github.io/arc-dag/api) |
+| LLM config (`GraphEngine({ llm })`) | [llm-config](https://arcpx-eng.github.io/arc-dag/llm-config) |
+| Bring your own LLM | [byo-llm](https://arcpx-eng.github.io/arc-dag/byo-llm) |
+| Payload & JSON format | [payload-guide](https://arcpx-eng.github.io/arc-dag/payload-guide) |
+| All examples | [examples](https://arcpx-eng.github.io/arc-dag/examples/) |
+| Extend builtin executor | [extending-builtin-executor](https://arcpx-eng.github.io/arc-dag/extending-builtin-executor) |
+
 ## Install
 
 ```bash
@@ -89,21 +105,7 @@ git clone https://github.com/arcpx-eng/arc-dag.git && cd arc-dag && npm install 
 npm run quickstart
 ```
 
-The npm package ships **only** compiled `dist/`, this README, LICENSE, and logo — no examples, tests, or env files.
-
-## Documentation
-
-**[https://arcpx-eng.github.io/arc-dag/](https://arcpx-eng.github.io/arc-dag/)** — full docs site (GitHub Pages, Mermaid diagrams, examples).
-
-| Topic | Link |
-|-------|------|
-| Getting started | [getting-started](https://arcpx-eng.github.io/arc-dag/getting-started) |
-| API reference | [api](https://arcpx-eng.github.io/arc-dag/api) |
-| LLM config (`GraphEngine({ llm })`) | [llm-config](https://arcpx-eng.github.io/arc-dag/llm-config) |
-| All examples | [examples](https://arcpx-eng.github.io/arc-dag/examples/) |
-| Extend builtin executor | [extending-builtin-executor](https://arcpx-eng.github.io/arc-dag/extending-builtin-executor) |
-
-Source markdown is in [`docs/`](https://github.com/arcpx-eng/arc-dag/tree/main/docs). Local preview: `cd docs-site && npm install && npm start` → http://localhost:3000
+The npm package ships **only** compiled `dist/`, this README, LICENSE, and logo — examples and full docs are on [GitHub](https://github.com/arcpx-eng/arc-dag) and the [docs site](https://arcpx-eng.github.io/arc-dag/).
 
 ## Contributing
 
