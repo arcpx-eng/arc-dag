@@ -1,6 +1,6 @@
 {
   "name": "arc-dag",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Open-source DAG engine from ArcPX — pluggable node executor, parallel workflows, GraphEngine({ llm }) for Bedrock/OpenAI",
   "readme": "README.md",
   "type": "module",
