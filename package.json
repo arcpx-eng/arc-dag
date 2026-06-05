@@ -1,6 +1,6 @@
 {
-  "name": "async-dag",
-  "version": "0.2.0",
+  "name": "arc-dag",
+  "version": "0.1.0",
   "description": "Open-source DAG engine from ArcPX — pluggable node executor, parallel workflows, GraphEngine({ llm }) for Bedrock/OpenAI",
   "readme": "README.md",
   "type": "module",
@@ -37,7 +37,7 @@
     "pack:check": "npm run build && node scripts/verify-npm-pack.mjs"
   },
   "keywords": [
-    "async-dag",
+    "arc-dag",
     "arcpx",
     "dag",
     "graph",
@@ -52,11 +52,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arcpx-eng/async-dag.git"
+    "url": "https://github.com/arcpx-eng/arc-dag.git"
   },
-  "homepage": "https://arcpx-eng.github.io/async-dag/",
+  "homepage": "https://arcpx-eng.github.io/arc-dag/",
   "bugs": {
-    "url": "https://github.com/arcpx-eng/async-dag/issues"
+    "url": "https://github.com/arcpx-eng/arc-dag/issues"
   },
   "engines": {
     "node": ">=18"

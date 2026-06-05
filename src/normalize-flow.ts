@@ -94,7 +94,7 @@ function normalizeEdge(edge: FlowEdge): FlowEdge {
 
 /**
  * Strip canvas-only fields from an exported pipeline so the payload is stable
- * for async-dag runs, version control, and documentation.
+ * for arc-dag runs, version control, and documentation.
  */
 export function normalizeFlow(
   flow: FlowDocument,

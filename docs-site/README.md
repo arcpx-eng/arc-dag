@@ -1,7 +1,7 @@
-# async-dag docs site (not published to npm)
+# arc-dag docs site (not published to npm)
 
-**Maintainers only** — this folder is separate from the `async-dag` npm package.  
-`npm install async-dag` installs **only** `dist/` + README (no VitePress).
+**Maintainers only** — this folder is separate from the `arc-dag` npm package.  
+`npm install arc-dag` installs **only** `dist/` + README (no VitePress).
 
 Serves markdown from [`../docs`](../docs) via [VitePress](https://vitepress.dev/).
 
@@ -35,7 +35,7 @@ Change files under [`../docs/`](../docs/). Config lives in `docs/.vitepress/`; d
 
 ## GitHub Pages (public)
 
-**Live site:** [https://arcpx-eng.github.io/async-dag/](https://arcpx-eng.github.io/async-dag/)
+**Live site:** [https://arcpx-eng.github.io/arc-dag/](https://arcpx-eng.github.io/arc-dag/)
 
 Pushes to `main` that touch `docs/` or `docs-site/` run [`.github/workflows/docs-pages.yml`](../.github/workflows/docs-pages.yml).
 
@@ -45,8 +45,8 @@ Pushes to `main` that touch `docs/` or `docs-site/` run [`.github/workflows/docs
 2. **Build and deployment** → Source: **GitHub Actions**
 3. Push to `main` (or run the workflow manually) — first deploy may take a few minutes
 
-Preview production build locally (uses `/async-dag/` base like GitHub Pages):
+Preview production build locally (uses `/arc-dag/` base like GitHub Pages):
 
 ```bash
-npm run build && VITEPRESS_BASE=/async-dag/ npm run serve
+npm run build && VITEPRESS_BASE=/arc-dag/ npm run serve
 ```

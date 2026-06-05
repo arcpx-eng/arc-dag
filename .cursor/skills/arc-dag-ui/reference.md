@@ -1,4 +1,4 @@
-# async-dag payload reference
+# arc-dag payload reference
 
 Canonical walkthrough with a real multi-node export: [`docs/payload-guide.md`](../../../docs/payload-guide.md).  
 Normalized example: [`examples/pipeline-ai-repos.normalized.json`](../../../examples/pipeline-ai-repos.normalized.json).
@@ -6,7 +6,7 @@ Normalized example: [`examples/pipeline-ai-repos.normalized.json`](../../../exam
 ## Normalize exports
 
 ```typescript
-import { parseAndNormalizeFlowJson, normalizeFlow } from "async-dag";
+import { parseAndNormalizeFlowJson, normalizeFlow } from "arc-dag";
 
 const flow = parseAndNormalizeFlowJson(raw, { stripSourceData: true, stripOutputs: true });
 ```
@@ -149,7 +149,7 @@ function defaultData(def: NodeDefinition): Record<string, unknown> {
 ## Executor skeleton
 
 ```typescript
-import type { FlowNode } from "async-dag";
+import type { FlowNode } from "arc-dag";
 
 export function createExecutor(deps: { llm: YourLlmClient }) {
   return async (node: FlowNode) => {

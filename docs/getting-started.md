@@ -7,8 +7,8 @@ sidebar_position: 2
 ## Install
 
 ```bash
-git clone https://github.com/arcpx-eng/async-dag.git
-cd async-dag
+git clone https://github.com/arcpx-eng/arc-dag.git
+cd arc-dag
 npm install
 npm run build
 ```
@@ -40,7 +40,7 @@ import {
   GraphEngine,
   loadFlowFromFile,
   createBuiltinNodeExecutor,
-} from "async-dag";
+} from "arc-dag";
 
 const flow = await loadFlowFromFile("./pipeline.json");
 
@@ -68,7 +68,7 @@ See [LLM configuration](./llm-config.md) for OpenAI-compatible providers and all
 ## Project layout
 
 ```
-async-dag/
+arc-dag/
 ├── src/                 # Library (GraphEngine, parsers)
 ├── docs/                # Documentation
 ├── examples/            # Pipelines + runners

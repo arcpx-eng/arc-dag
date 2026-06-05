@@ -20,13 +20,13 @@ This project is maintained by a **single developer**. Use one of the private cha
 
 Report through GitHub’s private vulnerability form:
 
-1. Open [github.com/arcpx-eng/async-dag](https://github.com/arcpx-eng/async-dag)
+1. Open [github.com/arcpx-eng/arc-dag](https://github.com/arcpx-eng/arc-dag)
 2. Open the **Security** tab
 3. Click **Report a vulnerability**
 
 Submissions are visible only to the maintainer. Use this channel to discuss and resolve the issue before any public disclosure.
 
-Direct link: [Report a vulnerability](https://github.com/arcpx-eng/async-dag/security/advisories/new)
+Direct link: [Report a vulnerability](https://github.com/arcpx-eng/arc-dag/security/advisories/new)
 
 Requires [private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) to be enabled on the repository.
 

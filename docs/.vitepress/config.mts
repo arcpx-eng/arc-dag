@@ -6,13 +6,13 @@ import { withMermaid } from 'vitepress-plugin-mermaid';
 const docsRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const siteRoot = path.resolve(docsRoot, '../docs-site');
 
-// GitHub Pages project site: https://arcpx-eng.github.io/async-dag/
+// GitHub Pages project site: https://arcpx-eng.github.io/arc-dag/
 // Local dev: VITEPRESS_BASE=/ npm start (see docs-site/package.json)
-const base = process.env.VITEPRESS_BASE ?? '/async-dag/';
+const base = process.env.VITEPRESS_BASE ?? '/arc-dag/';
 
 export default withMermaid(
   defineConfig({
-    title: 'async-dag',
+    title: 'arc-dag',
     description: 'Open-source DAG engine — pluggable nodes, parallel execution',
     base,
     cleanUrls: true,
@@ -35,7 +35,7 @@ export default withMermaid(
       logo: '/logo.svg',
       nav: [
         { text: 'Docs', link: '/' },
-        { text: 'GitHub', link: 'https://github.com/arcpx-eng/async-dag' },
+        { text: 'GitHub', link: 'https://github.com/arcpx-eng/arc-dag' },
       ],
       sidebar: [
         { text: 'Documentation index', link: '/' },
@@ -75,10 +75,10 @@ export default withMermaid(
         { text: 'Changelog', link: '/changelog' },
       ],
       socialLinks: [
-        { icon: 'github', link: 'https://github.com/arcpx-eng/async-dag' },
+        { icon: 'github', link: 'https://github.com/arcpx-eng/arc-dag' },
       ],
       editLink: {
-        pattern: 'https://github.com/arcpx-eng/async-dag/edit/main/docs/:path',
+        pattern: 'https://github.com/arcpx-eng/arc-dag/edit/main/docs/:path',
       },
       footer: {
         message: 'MIT Licensed',

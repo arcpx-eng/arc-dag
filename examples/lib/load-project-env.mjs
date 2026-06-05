@@ -19,7 +19,7 @@ function tryLoad(root, relativePath) {
  *
  * You may put BEDROCK_* in either file. Both are loaded if present.
  *
- * @param {string} [root] — absolute path to async-dag repo root
+ * @param {string} [root] — absolute path to arc-dag repo root
  * @returns {{ loaded: string[], checked: { path: string, exists: boolean }[] }}
  */
 export function loadProjectEnv(root = process.cwd()) {

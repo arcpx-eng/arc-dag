@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Run a pipeline JSON file exported from arcpx.com locally with async-dag.
+ * Run a pipeline JSON file exported from arcpx.com locally with arc-dag.
  *
  * Usage:
  *   node examples/run-local.mjs ./pipeline.json

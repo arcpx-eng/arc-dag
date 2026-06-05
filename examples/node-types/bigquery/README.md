@@ -1,6 +1,6 @@
 # `bigQuery` node type (example)
 
-Reference handler for running SQL against **Google BigQuery** from async-dag.
+Reference handler for running SQL against **Google BigQuery** from arc-dag.
 
 ## `node.data.nodeData` shape
 
@@ -20,7 +20,7 @@ Reference handler for running SQL against **Google BigQuery** from async-dag.
 | `GOOGLE_APPLICATION_CREDENTIALS` | Path to service account JSON (local dev) |
 | Or ADC | Workload identity / `gcloud auth application-default login` on your machine |
 
-Install the client in **your** app (not required by async-dag core):
+Install the client in **your** app (not required by arc-dag core):
 
 ```bash
 npm install @google-cloud/bigquery

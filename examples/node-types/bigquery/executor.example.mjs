@@ -1,7 +1,7 @@
 /**
  * Example bigQuery handler — copy into your nodeExecutor or extend via PR.
  *
- * Requires: npm install @google-cloud/bigquery (in your project, not async-dag core)
+ * Requires: npm install @google-cloud/bigquery (in your project, not arc-dag core)
  */
 
 export function createBigQueryHandler() {

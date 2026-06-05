@@ -46,7 +46,7 @@ function parseFlags(argv) {
 }
 
 function printHelp() {
-  console.log(`async-dag — generate a local node handler (interactive)
+  console.log(`arc-dag — generate a local node handler (interactive)
 
 Usage:
   npm run generate:handler
@@ -89,7 +89,7 @@ function parseNodeDataJson(raw) {
  * @param {{ nodeTypeHint?: string, flags: { force: boolean, yes: boolean } }} opts
  */
 async function collectConfig(opts) {
-  console.log("\nasync-dag — new node handler\n");
+  console.log("\narc-dag — new node handler\n");
 
   const nodeType = await ask(
     "node.type (exact string from pipeline JSON, e.g. aiRepos, groupNode)",

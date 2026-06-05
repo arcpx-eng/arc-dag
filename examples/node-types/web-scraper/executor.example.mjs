@@ -3,7 +3,7 @@
  * node.type: "webpage" (ArcPX) — folder named web-scraper for clarity.
  */
 
-const DEFAULT_USER_AGENT = "async-dag-web-scraper/1.0 (+https://github.com/arcpx-eng/async-dag)";
+const DEFAULT_USER_AGENT = "arc-dag-web-scraper/1.0 (+https://github.com/arcpx-eng/arc-dag)";
 
 /**
  * @param {string} html

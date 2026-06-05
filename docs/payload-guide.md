@@ -1,6 +1,6 @@
 # Pipeline payload guide
 
-This document describes the **input JSON** async-dag expects, how to **normalize** a raw canvas export, and a **real-world example** (AI repos → JSON transform → LLM synthesis).
+This document describes the **input JSON** arc-dag expects, how to **normalize** a raw canvas export, and a **real-world example** (AI repos → JSON transform → LLM synthesis).
 
 ## Top-level shape
 
@@ -40,7 +40,7 @@ Canvas apps (including ArcPX) often export **extra UI state**. Normalize before 
 ### Normalize in code
 
 ```typescript
-import { parseFlowJson, normalizeFlow, parseAndNormalizeFlowJson } from "async-dag";
+import { parseFlowJson, normalizeFlow, parseAndNormalizeFlowJson } from "arc-dag";
 
 const flow = parseAndNormalizeFlowJson(exportedJson, {
   stripSourceData: true,
@@ -100,7 +100,7 @@ For each node, GraphEngine calls `nodeExecutor(node)` with `data` augmented:
 }
 ```
 
-Implement substitution of `{$variable}` and LLM calls in **your** executor — async-dag only schedules the DAG.
+Implement substitution of `{$variable}` and LLM calls in **your** executor — arc-dag only schedules the DAG.
 
 ## `nodeData` types
 
@@ -176,4 +176,4 @@ Copy when defining your own graphs without a UI:
 - [Documentation index](./README.md)
 - [Bring your own LLM](./byo-llm.md)
 - [API reference](./api.md)
-- [Skill: async-dag-ui](../.cursor/skills/async-dag-ui/SKILL.md)
+- [Skill: arc-dag-ui](../.cursor/skills/arc-dag-ui/SKILL.md)

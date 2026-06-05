@@ -3,7 +3,7 @@
 **Run:** `npm run run:output-chaining`  
 **Pipeline:** [`examples/pipeline-output-chaining.json`](../../examples/pipeline-output-chaining.json)
 
-**Output chaining** — two `webpage` nodes fetch in parallel, fan in to **`genText`** (same `node.type` as [arcpx-infra](https://github.com/arcpx-eng/async-dag) exports). Bedrock credentials are passed as `GraphEngine({ llm })` — locally from [`.env.bedrock`](../../.env.bedrock.template); in your app from code. See [LLM configuration](../llm-config.md).
+**Output chaining** — two `webpage` nodes fetch in parallel, fan in to **`genText`** (same `node.type` as [arcpx-infra](https://github.com/arcpx-eng/arc-dag) exports). Bedrock credentials are passed as `GraphEngine({ llm })` — locally from [`.env.bedrock`](../../.env.bedrock.template); in your app from code. See [LLM configuration](../llm-config.md).
 
 ```mermaid
 flowchart LR
@@ -58,7 +58,7 @@ import {
   GraphEngine,
   loadFlowFromFile,
   createBuiltinNodeExecutor,
-} from "async-dag";
+} from "arc-dag";
 import { createNodeExecutor } from "./examples/lib/handlers/index.mjs"; // + webpage
 
 const flow = await loadFlowFromFile("./examples/pipeline-output-chaining.json");

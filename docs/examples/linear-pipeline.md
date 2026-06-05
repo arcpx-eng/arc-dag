@@ -17,7 +17,7 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-  input_1["input_1 · text<br/>hello async-dag"]
+  input_1["input_1 · text<br/>hello arc-dag"]
   cell_1["cell_1 · pipeNode<br/>$stored"]
   output_1["output_1 · pipeNode"]
   input_1 --> cell_1 --> output_1
@@ -32,7 +32,7 @@ flowchart TB
       "id": "input_1",
       "type": "text",
       "position": { "x": 0, "y": 0 },
-      "data": { "label": "Input", "nodeData": "hello async-dag" }
+      "data": { "label": "Input", "nodeData": "hello arc-dag" }
     },
     {
       "id": "cell_1",

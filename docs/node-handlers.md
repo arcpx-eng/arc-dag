@@ -1,6 +1,6 @@
 # Node handlers (local runner)
 
-async-dag runs every node in your pipeline JSON. **`nodeExecutor`** (in [`examples/run-local.mjs`](../examples/run-local.mjs)) must handle each `node.type` — otherwise you see a **stub** response:
+arc-dag runs every node in your pipeline JSON. **`nodeExecutor`** (in [`examples/run-local.mjs`](../examples/run-local.mjs)) must handle each `node.type` — otherwise you see a **stub** response:
 
 ```json
 {
@@ -65,7 +65,7 @@ node examples/run-local.mjs ./your-pipeline.json
 
 ## Core types (ArcPX — package builtin)
 
-See **[core-node-types.md](./core-node-types.md)** — `createBuiltinNodeExecutor()` from `async-dag`.
+See **[core-node-types.md](./core-node-types.md)** — `createBuiltinNodeExecutor()` from `arc-dag`.
 
 Includes **`pipeNode`**, **`genText`**, `text`, `groupNode`, and more. **`webpage`** and integrations are **extensions** — see **[Extending the builtin executor](./extending-builtin-executor.md)**.
 
@@ -81,7 +81,7 @@ flowchart LR
   create["createNodeExecutor()"]
   ext["extension handlers\nwebpage, llm"]
   registry["node-types/registry.mjs"]
-  pkg["createBuiltinNodeExecutor()\nasync-dag package"]
+  pkg["createBuiltinNodeExecutor()\narc-dag package"]
   runLocal --> create
   create --> ext
   create --> registry

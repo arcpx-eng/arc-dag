@@ -69,4 +69,4 @@ function createExecutor() {
 }
 ```
 
-Open a PR against [arcpx-eng/async-dag](https://github.com/arcpx-eng/async-dag) with the label **node-type** (if available) or mention it in the description.
+Open a PR against [arcpx-eng/arc-dag](https://github.com/arcpx-eng/arc-dag) with the label **node-type** (if available) or mention it in the description.

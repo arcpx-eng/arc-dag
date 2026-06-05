@@ -9,7 +9,7 @@ import {
   GraphEngine,
   loadFlowFromFile,
   createBuiltinNodeExecutor,
-} from "async-dag";
+} from "arc-dag";
 
 const flow = await loadFlowFromFile("./pipeline.json");
 
@@ -107,7 +107,7 @@ Per-node `data.settings` in pipeline JSON still overrides both for that node onl
 Example runners add **extension** handlers (`webpage`, community node types) on top. See [Extending the builtin executor](./extending-builtin-executor.md).
 
 ```typescript
-import { createBuiltinNodeExecutor } from "async-dag";
+import { createBuiltinNodeExecutor } from "arc-dag";
 import { createNodeExecutor } from "./examples/lib/handlers/index.mjs"; // builtins + webpage + community
 
 const engine = new GraphEngine({
@@ -141,7 +141,7 @@ Bedrock env wins when `BEDROCK_API_KEY` is set.
 
 ## `genText` prompt placeholders
 
-`resolveGenTextQuery()` (exported from `async-dag`) substitutes upstream data into `data.nodeData`:
+`resolveGenTextQuery()` (exported from `arc-dag`) substitutes upstream data into `data.nodeData`:
 
 | Placeholder | Meaning |
 |-------------|---------|

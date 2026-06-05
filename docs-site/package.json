@@ -1,8 +1,8 @@
 {
-  "name": "@async-dag/docs-site",
+  "name": "@arc-dag/docs-site",
   "version": "0.0.0",
   "private": true,
-  "description": "Local VitePress site for async-dag — not published to npm",
+  "description": "Local VitePress site for arc-dag — not published to npm",
   "type": "module",
   "scripts": {
     "postinstall": "ln -sfn ../docs-site/node_modules ../docs/node_modules",

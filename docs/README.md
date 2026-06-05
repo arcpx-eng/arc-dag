@@ -3,11 +3,11 @@ sidebar_position: 1
 title: Documentation index
 ---
 
-# async-dag documentation
+# arc-dag documentation
 
-**Public docs:** [https://arcpx-eng.github.io/async-dag/](https://arcpx-eng.github.io/async-dag/)
+**Public docs:** [https://arcpx-eng.github.io/arc-dag/](https://arcpx-eng.github.io/arc-dag/)
 
-**Local preview (clone only, not `npm install async-dag`):** `cd docs-site && npm install && npm start` — see [docs-site/README.md](https://github.com/arcpx-eng/async-dag/blob/main/docs-site/README.md).
+**Local preview (clone only, not `npm install arc-dag`):** `cd docs-site && npm install && npm start` — see [docs-site/README.md](https://github.com/arcpx-eng/arc-dag/blob/main/docs-site/README.md).
 
 | Doc | Description |
 |-----|-------------|
@@ -41,4 +41,4 @@ title: Documentation index
 - [Contributing](./contributing) — PRs, community node types
 - [Security policy](./security) — reporting vulnerabilities
 - [Changelog](./changelog)
-- [async-dag-ui skill](https://github.com/arcpx-eng/async-dag/blob/main/.cursor/skills/async-dag-ui/SKILL.md) — build a wrapper UI
+- [arc-dag-ui skill](https://github.com/arcpx-eng/arc-dag/blob/main/.cursor/skills/arc-dag-ui/SKILL.md) — build a wrapper UI

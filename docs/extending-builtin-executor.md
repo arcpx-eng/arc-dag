@@ -39,7 +39,7 @@ flowchart TD
   CUSTOM -->|no match| BUILTIN
 ```
 
-Resolution order in the async-dag examples:
+Resolution order in the arc-dag examples:
 
 1. **Extension handlers** — `webpage`, OpenAI `llm` / `chat`
 2. **Community registry** — `bigQuery`, `markdownOutput`, generated types
@@ -115,7 +115,7 @@ import {
   GraphEngine,
   loadFlowFromFile,
   createBuiltinNodeExecutor,
-} from "async-dag";
+} from "arc-dag";
 import { createWebpageHandler } from "./handlers/webpage.mjs";
 
 const customHandlers = new Map([
@@ -155,7 +155,7 @@ import {
   createBuiltinNodeExecutor,
   type FlowNode,
   type NodeExecutor,
-} from "async-dag";
+} from "arc-dag";
 
 type NodeHandler = (node: FlowNode) => Promise<unknown>;
 
@@ -183,9 +183,9 @@ const engine = new GraphEngine({
 
 Copy `extendBuiltinNodeExecutor` into your project, or import the example implementation below.
 
-## Step 3 — Example repo layout (async-dag)
+## Step 3 — Example repo layout (arc-dag)
 
-The async-dag repo uses this structure:
+The arc-dag repo uses this structure:
 
 | File | Role |
 |------|------|
@@ -196,7 +196,7 @@ The async-dag repo uses this structure:
 
 ```javascript
 // examples/lib/handlers/index.mjs (simplified)
-import { createBuiltinNodeExecutor } from "async-dag";
+import { createBuiltinNodeExecutor } from "arc-dag";
 import { buildExtensionHandlers } from "./builtin.mjs";
 import { loadCommunityHandlers } from "../node-types/registry.mjs";
 

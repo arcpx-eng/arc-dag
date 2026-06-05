@@ -1,6 +1,6 @@
 # `xApi` node type (example)
 
-Reference handler for calling the **X (Twitter) API** from async-dag pipelines.
+Reference handler for calling the **X (Twitter) API** from arc-dag pipelines.
 
 > Use official APIs and comply with [X developer terms](https://developer.x.com/). Rate limits and authentication are your responsibility.
 

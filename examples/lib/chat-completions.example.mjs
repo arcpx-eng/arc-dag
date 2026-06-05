@@ -1,5 +1,5 @@
 /**
- * Minimal OpenAI-compatible chat client for async-dag nodeExecutor.
+ * Minimal OpenAI-compatible chat client for arc-dag nodeExecutor.
  * Works with OpenAI, Azure OpenAI, Ollama (/v1), LM Studio, vLLM, etc.
  *
  * Env (required unless overridden in globalSettings):
@@ -64,7 +64,7 @@ export async function chatComplete({
   return content;
 }
 
-/** Flatten async-dag sourceData / chat history into OpenAI-style messages. */
+/** Flatten arc-dag sourceData / chat history into OpenAI-style messages. */
 function normalizeHistory(sourceData) {
   const messages = [];
   const items = Array.isArray(sourceData) ? sourceData : sourceData ? [sourceData] : [];

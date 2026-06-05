@@ -1,6 +1,6 @@
 # Bring your own LLM (BYO endpoint)
 
-async-dag ships a **DAG runner** (`GraphEngine`). For `genText` nodes you can either pass credentials on the engine (`llm` option) and use `createBuiltinNodeExecutor()`, or wire your own provider in a custom **`nodeExecutor`**.
+arc-dag ships a **DAG runner** (`GraphEngine`). For `genText` nodes you can either pass credentials on the engine (`llm` option) and use `createBuiltinNodeExecutor()`, or wire your own provider in a custom **`nodeExecutor`**.
 
 Full reference: [LLM configuration](./llm-config.md).
 
@@ -13,7 +13,7 @@ import {
   GraphEngine,
   loadFlowFromFile,
   createBuiltinNodeExecutor,
-} from "async-dag";
+} from "arc-dag";
 
 const flow = await loadFlowFromFile("./pipeline.json");
 
@@ -126,7 +126,7 @@ Copy [`examples/global-settings.example.json`](../examples/global-settings.examp
 
 ## 3. What the executor receives (`genText` example)
 
-For a chat node, async-dag calls your handler with a full pipeline node:
+For a chat node, arc-dag calls your handler with a full pipeline node:
 
 ```json
 {
@@ -154,7 +154,7 @@ For a chat node, async-dag calls your handler with a full pipeline node:
 | `data.settings.maxOutputTokens` | Max tokens |
 | `data.settings.systemPrompt` | System message |
 
-Use [`formatChatTurn` / `formatChatHistory`](./api.md) from `async-dag` if you build multi-turn history in Gemini vs OpenAI shapes.
+Use [`formatChatTurn` / `formatChatHistory`](./api.md) from `arc-dag` if you build multi-turn history in Gemini vs OpenAI shapes.
 
 ## 4. Quick run (included example)
 
@@ -184,7 +184,7 @@ Implementation files:
 ## 5. Wire into your own app (TypeScript)
 
 ```typescript
-import { GraphEngine, loadFlowFromFile } from "async-dag";
+import { GraphEngine, loadFlowFromFile } from "arc-dag";
 
 const flow = await loadFlowFromFile("./pipeline.json");
 
@@ -225,7 +225,7 @@ const engine = new GraphEngine({
 await engine.run();
 ```
 
-Swap `fetch` for `@anthropic-ai/sdk`, `@google/generative-ai`, etc. — async-dag only needs your handler to return the node output (usually a string).
+Swap `fetch` for `@anthropic-ai/sdk`, `@google/generative-ai`, etc. — arc-dag only needs your handler to return the node output (usually a string).
 
 ## AWS Bedrock (`node.type`: `LLM`)
 

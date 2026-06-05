@@ -4,7 +4,7 @@ ArcPX pipelines use many `node.type` values. The **npm package** builtin (`creat
 
 | Layer | Location | Examples |
 |-------|----------|----------|
-| Package builtin | `async-dag` → `createBuiltinNodeExecutor()` | `genText`, `pipeNode`, `text` |
+| Package builtin | `arc-dag` → `createBuiltinNodeExecutor()` | `genText`, `pipeNode`, `text` |
 | Extensions | Your code / [`handlers/builtin.mjs`](../examples/lib/handlers/builtin.mjs) | `webpage`, `llm`, `chat` |
 | Community | [`registry.mjs`](../examples/node-types/registry.mjs) | `bigQuery`, `markdownOutput` |
 

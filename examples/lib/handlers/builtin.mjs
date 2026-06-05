@@ -1,6 +1,6 @@
 /**
  * Example-only handlers not in the core package builtin executor.
- * Core types (genText, pipeNode, text, …) → createBuiltinNodeExecutor() from "async-dag".
+ * Core types (genText, pipeNode, text, …) → createBuiltinNodeExecutor() from "arc-dag".
  */
 
 import { createWebpageHandler } from "../../node-types/web-scraper/executor.example.mjs";

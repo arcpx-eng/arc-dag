@@ -1,11 +1,11 @@
 # ArcPX integration
 
-[ArcPX](https://arcpx.com) is the full product UI built on the same engine as **async-dag**. You can use both:
+[ArcPX](https://arcpx.com) is the full product UI built on the same engine as **arc-dag**. You can use both:
 
 | Tool | Role |
 |------|------|
 | **arcpx.com** | Visual DAG editor, save/download pipelines |
-| **async-dag** | Run pipelines locally with your `nodeExecutor` and LLM |
+| **arc-dag** | Run pipelines locally with your `nodeExecutor` and LLM |
 
 ## Export from ArcPX
 

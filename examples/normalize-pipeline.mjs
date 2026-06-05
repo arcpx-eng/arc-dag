@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Normalize a raw canvas export for async-dag / git / docs.
+ * Normalize a raw canvas export for arc-dag / git / docs.
  *
  * Usage:
  *   node examples/normalize-pipeline.mjs ./pipeline.json

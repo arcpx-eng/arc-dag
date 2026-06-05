@@ -1,14 +1,14 @@
 ---
-name: async-dag-ui
+name: arc-dag-ui
 description: >-
-  Designs DAG canvas UIs that wrap the pluggable async-dag GraphEngine — export pipeline
+  Designs DAG canvas UIs that wrap the pluggable arc-dag GraphEngine — export pipeline
   JSON, easy local runs, parallel execution. Use when building pipeline editors or
   nodeExecutor handlers.
 ---
 
-# async-dag DAG UI synthesis
+# arc-dag DAG UI synthesis
 
-async-dag is the **open-source core engine of ArcPX** — pluggable, easy to run, parallel by default. Help the user **wrap it** with their own UI and **`nodeExecutor`** for custom nodes, workflows, and automation. Export a **`FlowDocument`** (`nodes` + `edges`).
+arc-dag is the **open-source core engine of ArcPX** — pluggable, easy to run, parallel by default. Help the user **wrap it** with their own UI and **`nodeExecutor`** for custom nodes, workflows, and automation. Export a **`FlowDocument`** (`nodes` + `edges`).
 
 ## Contract (non-negotiable)
 
@@ -26,7 +26,7 @@ Graph input must serialize to:
 - **`data`** — per-node config the UI collects (prompts, URLs, flags). Use **`nodeData`** for primary user input text when mirroring ArcPX-style graphs.
 - **`globalSettings`** (separate object at run time) — model name, temperature, system prompt, API keys via env (never commit secrets into JSON).
 
-Validate with `parseFlowJson` from `async-dag` before run.
+Validate with `parseFlowJson` from `arc-dag` before run.
 
 Full field reference: [reference.md](reference.md).
 
@@ -50,7 +50,7 @@ Build the editor so **node types are data-driven**, not hard-coded screens:
 
 3. **Palette / drag-drop** — clone a template node: `{ id: uuid(), type, position, data: defaultDataFromSchema(def) }`.
 
-4. **Live export** — on Save / Run, serialize `{ nodes, edges }` (and optional `viewport`) from your graph store. That object **is** the async-dag input.
+4. **Live export** — on Save / Run, serialize `{ nodes, edges }` (and optional `viewport`) from your graph store. That object **is** the arc-dag input.
 
 5. **Type-safe executor map** — `Record<string, NodeHandler>` keyed by `type`; LLM nodes read `node.data.nodeData`, `node.data.sourceData`, `node.data.settings`.
 
@@ -62,7 +62,7 @@ In `nodeExecutor` for types like `genText` / `llm` / `chat`, wire the LLM stack 
 - Call OpenAI, Anthropic, Gemini, Ollama, etc. from **user-provided** SDK/config.
 - Return a string or structured object; engine stores it as that node's output.
 
-Use `formatChatTurn` / `formatChatHistory` from `async-dag` only if you adopt OpenAI vs Gemini message shapes.
+Use `formatChatTurn` / `formatChatHistory` from `arc-dag` only if you adopt OpenAI vs Gemini message shapes.
 
 ## Implementation checklist
 
@@ -99,7 +99,7 @@ node examples/run-local.mjs ./pipeline.json ./global-settings.json
 Programmatic:
 
 ```typescript
-import { GraphEngine, loadFlowFromFile } from "async-dag";
+import { GraphEngine, loadFlowFromFile } from "arc-dag";
 
 const flow = await loadFlowFromFile("./pipeline.json");
 const engine = new GraphEngine({ flow, globalSettings, nodeExecutor: myExecutor });

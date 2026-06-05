@@ -25,7 +25,7 @@ Fetch a URL and return **title + plain text** (HTML stripped). Uses Node’s bui
 | `url` | yes | — |
 | `timeoutMs` | no | `15000` |
 | `maxChars` | no | `50000` |
-| `userAgent` | no | `WEB_SCRAPER_USER_AGENT` env or async-dag default |
+| `userAgent` | no | `WEB_SCRAPER_USER_AGENT` env or arc-dag default |
 
 ## Environment (optional)
 

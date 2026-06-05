@@ -5,7 +5,7 @@ Full LLM setup guide: [LLM configuration](./llm-config.md).
 ## `GraphEngine`
 
 ```typescript
-import { GraphEngine, loadFlowFromFile } from "async-dag";
+import { GraphEngine, loadFlowFromFile } from "arc-dag";
 
 const engine = new GraphEngine({
   flow,
@@ -56,7 +56,7 @@ await engine.run(); // Map<nodeId, output>
 
 ## Types
 
-Exported from `async-dag`: `FlowDocument`, `FlowNode`, `FlowEdge`, `FlowNodeData`, `GraphEngineOptions`, `NodeExecutor`, `NodeEvent`, `LlmConfig`, `LlmProviderName`, `BedrockLlmConfig`, `OpenAiLlmConfig`, `createBuiltinNodeExecutor`, `resolveGenTextQuery`, `mergeLlmConfigIntoGlobalSettings`.
+Exported from `arc-dag`: `FlowDocument`, `FlowNode`, `FlowEdge`, `FlowNodeData`, `GraphEngineOptions`, `NodeExecutor`, `NodeEvent`, `LlmConfig`, `LlmProviderName`, `BedrockLlmConfig`, `OpenAiLlmConfig`, `createBuiltinNodeExecutor`, `resolveGenTextQuery`, `mergeLlmConfigIntoGlobalSettings`.
 
 ### Bedrock example
 
@@ -65,7 +65,7 @@ import {
   GraphEngine,
   loadFlowFromFile,
   createBuiltinNodeExecutor,
-} from "async-dag";
+} from "arc-dag";
 
 const flow = await loadFlowFromFile("./pipeline.json");
 

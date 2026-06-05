@@ -1,5 +1,5 @@
 /**
- * Re-exports from the async-dag package (single source of truth in src/).
+ * Re-exports from the arc-dag package (single source of truth in src/).
  * Examples and tests import this path; run `npm run build` first.
  */
 export {
