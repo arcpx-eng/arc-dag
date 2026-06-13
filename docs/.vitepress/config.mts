@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitepress';
@@ -20,11 +21,31 @@ export default withMermaid(
     ignoreDeadLinks: true,
     rewrites: {
       'README.md': 'index.md',
+      ':dir(.*)/README.md': ':dir/index.md',
     },
     head: [['link', { rel: 'icon', href: '/logo.svg' }]],
     vite: {
       // Deps live in docs-site/; keep Vite cache there too.
       cacheDir: path.join(siteRoot, 'node_modules/.vite'),
+      plugins: [
+        {
+          name: 'serve-project-examples',
+          configureServer(server) {
+            const examplesDir = path.join(docsRoot, '..', 'examples');
+            server.middlewares.use((req, res, next) => {
+              if (!req.url?.startsWith('/examples/')) return next();
+              const rel = req.url.slice('/examples/'.length).split('?')[0];
+              const abs = path.join(examplesDir, rel);
+              if (rel && fs.existsSync(abs) && fs.statSync(abs).isFile()) {
+                res.setHeader('Cache-Control', 'no-cache');
+                fs.createReadStream(abs).pipe(res);
+                return;
+              }
+              next();
+            });
+          },
+        },
+      ],
       server: {
         port: 3000,
         fs: { allow: [docsRoot, siteRoot] },
